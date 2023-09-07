@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+.saludo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.saludo h1 {
+    font-size: 30px;
+    
+}
+
+.carousel-item img{
+    margin: auto;
+    width: 600px; ;
+    height: 300px;
+}
+
+.carousel-inner{
+    background: rgb(84,83,83);
+    background: linear-gradient(0deg, rgba(84,83,83,1) 15%, rgba(153,152,152,1) 53%);
+}
