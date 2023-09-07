@@ -36,19 +36,47 @@ console.log(productoTienda)
 
 //continuar con el mostrar productos
 
+
+
 const mostrarProductos = () => {
-    productoTienda.forEach(producto=>{
+    producto.forEach(producto => {
         const card = document.createElement("div");
-        card.innerHTML= `<div class = "card">
+        card.innerHTML = `
+                        <div class = "card">
                             <img src="${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
                             <div>
                                 <h5>${producto.nombre}</h5>
                                 <p> $ ${producto.precio}</p>
                                 <button class="btn colorBoton" id= "boton ${producto.id}"> ** Agregar **</button>
                             </div>
-                        </div>`;
+                        </div>
+                        `
+        contenedorProductos.appendChild(card);
+        
+        
+    
+        const botonCompra = document.getElementById(`boton ${producto.id}`);
+        botonCompra.addEventListener("click", ()=>{
+            mostrarCarrito(producto.id),
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration : 1000,
+                gravity:"top",
+                position : "right"
+            }).showToast();})
+    
+    })}
 
-    contenedorProductos.appendChild(card);
+    console.log(mostrarProductos);
+
+
+    
+    let carrito = [];
+
+    const mostrarCarrito = (id) =>{
+        const seleccionado = productoTienda.find(producto => producto.id === id)
+        carrito.push(seleccionado)
     }
-)
-}
+    console.log(carrito);
+
+
