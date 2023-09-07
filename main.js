@@ -38,34 +38,36 @@ console.log(productoTienda)
 
 
 
-const mostrarProductos = () => {
-    producto.forEach(producto => {
-        const card = document.createElement("div");
-        card.innerHTML = `
-                        <div class = "card">
+function mostrarProductos() {
+    productoTienda.forEach((producto) => {
+            const card = document.createElement("div");
+            card.innerHTML = `<div class = "card">
                             <img src="${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
                             <div>
                                 <h5>${producto.nombre}</h5>
                                 <p> $ ${producto.precio}</p>
                                 <button class="btn colorBoton" id= "boton ${producto.id}"> ** Agregar **</button>
                             </div>
-                        </div>
-                        `
-        contenedorProductos.appendChild(card);
-        
-        
-    
-        const botonCompra = document.getElementById(`boton ${producto.id}`);
-        botonCompra.addEventListener("click", ()=>{
-            mostrarCarrito(producto.id),
-            Toastify({
-                text: "Producto agregado al carrito",
-                duration : 1000,
-                gravity:"top",
-                position : "right"
-            }).showToast();})
-    
-    })}
+                        </div>`
+                        
+            contenedorProductos.appendChild(card);
+            document.body.append(card)
+
+
+
+            const botonCompra = document.getElementById(`boton ${producto.id}`);
+            botonCompra.addEventListener("click", () => {
+                mostrarCarrito(producto.id),
+                    Toastify({
+                        text: "Producto agregado al carrito",
+                        duration: 1000,
+                        gravity: "top",
+                        position: "right"
+                    }).showToast();
+            });
+
+        });
+}
 
     console.log(mostrarProductos);
 
@@ -76,7 +78,8 @@ const mostrarProductos = () => {
     const mostrarCarrito = (id) =>{
         const seleccionado = productoTienda.find(producto => producto.id === id)
         carrito.push(seleccionado)
+        console.log(carrito);
     }
-    console.log(carrito);
+    
 
 
