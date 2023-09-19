@@ -12,22 +12,22 @@ class producto {
     }
 }
 
-const calzado1 = new producto(1,"47 Street Blanco", 21000, "img/1-streetblanco.jpg");
-const calzado2 = new producto(2, "47 Street Lila", 21000, "img/2-streetlila.jfif");
-const calzado3 = new producto(3, "47 Street Negro", 21000, "img/3-streetnegro.JPG");
-const calzado4 = new producto(4, "kevinstons Rosa",23500,"img/4-kevinston-rosa.jpg");
-const calzado5 = new producto(5,"Kevinstons Negro",23500, "img/5-kevinston-negro.jpg");
-const calzado6 = new producto(6, "Kevinstons Gris", 23500, "img/6-kevinston-gris.jpg");
-const calzado7 = new producto(7, "Fila Rojo", 28000, "img/7-fila-rojo.jpg");
-const calzado8 = new producto(8, "Fila Rosa", 28000, "img/8-fila-rosa.jpg");
-const calzado9 = new producto(9, "Fila Celeste", 28000, "img/9-fila-celeste.jpg");
-const calzado10 = new producto(10, "Fila Blanco", 28000, "img/10-fila-blanco.jpg");
-const calzado11 = new producto(11, "Fila Negro", 28000, "img/11-fila-negro.jfif");
-const calzado12 = new producto(12, "Fila Amarillo", 28000, "img/12-fila-amarillo.JPG");
-const calzado13 = new producto(13, "Gummi Dorado", 19800, "img/13-gummi-dorado.JPG");
-const calzado14 = new producto(14, "Gummi Negro", 19800, "img/14-gummi-negro.jpg");
-const calzado15 = new producto(15, "Gummi Multicolor", 20500, "img/15-gummi-colores.jpg");
-const calzado16 = new producto(16,"Gummi rosa",19800,"img/16-gummi-rosa.JPG");
+const calzado1 = new producto(1,"47 Street Blanco", 58000, "img/1-streetblanco.jpg");
+const calzado2 = new producto(2, "47 Street Lila", 58000, "img/2-streetlila.jfif");
+const calzado3 = new producto(3, "47 Street Negro", 58000, "img/3-streetnegro.JPG");
+const calzado4 = new producto(4, "kevinstons Rosa",48500,"img/4-kevinston-rosa.jpg");
+const calzado5 = new producto(5,"Kevinstons Negro",48500, "img/5-kevinston-negro.jpg");
+const calzado6 = new producto(6, "Kevinstons Gris",48500, "img/6-kevinston-gris.jpg");
+const calzado7 = new producto(7, "Fila Rojo", 62000, "img/7-fila-rojo.jpg");
+const calzado8 = new producto(8, "Fila Rosa", 62000, "img/8-fila-rosa.jpg");
+const calzado9 = new producto(9, "Fila Celeste", 62000, "img/9-fila-celeste.jpg");
+const calzado10 = new producto(10, "Fila Blanco", 62000, "img/10-fila-blanco.jpg");
+const calzado11 = new producto(11, "Fila Negro", 62000, "img/11-fila-negro.jfif");
+const calzado12 = new producto(12, "Fila Amarillo", 62000, "img/12-fila-amarillo.JPG");
+const calzado13 = new producto(13, "Gummi Dorado", 50800, "img/13-gummi-dorado.JPG");
+const calzado14 = new producto(14, "Gummi Negro", 50800, "img/14-gummi-negro.jpg");
+const calzado15 = new producto(15, "Gummi Multicolor", 50500, "img/15-gummi-colores.jpg");
+const calzado16 = new producto(16,"Gummi rosa",50800,"img/16-gummi-rosa.JPG");
 
 
 const productoTienda = [calzado1,calzado2,calzado3,calzado4,calzado5,calzado6,calzado7,calzado8,
@@ -80,11 +80,13 @@ function mostrarProductos() {
     
 let carrito = [];
 
+
+
     const mostrarCarrito = (id) =>{
         const seleccionado = productoTienda.find(producto => producto.id === id)
         carrito.push(seleccionado)
-        console.log(carrito);
-        productoTienda.forEach((producto)=>{
+        
+        carrito.forEach((producto)=>{
         const cardCarrito = document.createElement("div");
         cardCarrito.innerHTML = `<div class = "cardCarrito">
                         <img src="${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
@@ -95,10 +97,11 @@ let carrito = [];
                         </div>
                     </div>`
         carritoProductos.appendChild(cardCarrito)
-    })}
+        console.log(carrito);
+
+        localStorage.setItem("carritoGuardado",JSON.stringify(carrito))
+        carrito = JSON.parse(localStorage.getItem("carritoGuardado"))
         
+    })}
+
     imgCarrito.addEventListener("click",()=>{mostrarCarrito();})
-
-
-//localStorage.setItem("carritoPrueba",JSON.stringify(productoTienda))		
-//console.log(localStorage.getItem("carritoPrueba"));
