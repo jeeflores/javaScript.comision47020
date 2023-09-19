@@ -1,0 +1,96 @@
+[
+{"id":1,
+"nombre":"47 Street Blanco",
+"precio":21000,
+"img":"img/1-streetblanco.jpg",
+"cantidad":1},
+
+{"id":2,
+"nombre":"47 Street Lila",
+"precio":21000,
+"img":"img/2-streetlila.jfif",
+"cantidad":1},
+
+{"id":3,
+"nombre":"47 Street Negro",
+"precio":21000,
+"img":"img/3-streetnegro.JPG",
+"cantidad":1},
+
+{"id":4,
+"nombre":"kevinstons Rosa",
+"precio":23500,
+"img":"img/4-kevinston-rosa.jpg",
+"cantidad":1},
+
+{"id":5,
+"nombre":"Kevinstons Negro",
+"precio":23500,
+"img":"img/5-kevinston-negro.jpg",
+"cantidad":1},
+
+{"id":6,
+"nombre":"Kevinstons Gris",
+"precio":23500,
+"img":"img/6-kevinston-gris.jpg",
+"cantidad":1},
+
+{"id":7,
+"nombre":"Fila Rojo",
+"precio":28000,"img":"img/7-fila-rojo.jpg",
+"cantidad":1},
+
+{"id":8,
+"nombre":"Fila Rosa",
+"precio":28000,
+"img":"img/8-fila-rosa.jpg",
+"cantidad":1},
+
+{"id":9,
+"nombre":"Fila Celeste",
+"precio":28000,
+"img":"img/9-fila-celeste.jpg",
+"cantidad":1},
+
+{"id":10,
+"nombre":"Fila Blanco",
+"precio":28000,
+"img":"img/10-fila-blanco.jpg",
+"cantidad":1},
+
+{"id":11,
+"nombre":"Fila Negro",
+"precio":28000,
+"img":"img/11-fila-negro.jfif",
+"cantidad":1},
+
+{"id":12,
+"nombre":"Fila Amarillo",
+"precio":28000,
+"img":"img/12-fila-amarillo.JPG",
+"cantidad":1},
+
+{"id":13,
+"nombre":"Gummi Dorado",
+"precio":19800,
+"img":"img/13-gummi-dorado.JPG",
+"cantidad":1},
+
+{"id":14,
+"nombre":"Gummi Negro",
+"precio":19800,
+"img":"img/14-gummi-negro.jpg",
+"cantidad":1},
+
+{"id":15,
+"nombre":"Gummi Multicolor",
+"precio":20500,
+"img":"img/15-gummi-colores.jpg",
+"cantidad":1},
+
+{"id":16,
+"nombre":"Gummi rosa",
+"precio":19800,
+"img":"img/16-gummi-rosa.JPG",
+"cantidad":1}
+]

@@ -3,15 +3,24 @@
     padding: 0;
     box-sizing: border-box; }
 
-.saludo {
+#container {
+    background-color: rgb(224, 224, 224);
+}
+
+.Saludo {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.saludo h1 {
+.Saludo h1 {
     font-size: 30px;
     
+}
+
+.ImgCarrito{
+    width: 30px;
+    height: 30px;
 }
 
 .carousel-item img{
@@ -23,4 +32,42 @@
 .carousel-inner{
     background: rgb(84,83,83);
     background: linear-gradient(0deg, rgba(84,83,83,1) 15%, rgba(153,152,152,1) 53%);
+}
+
+
+#tienda{
+    margin: 30px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    margin: 15px;
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+}
+
+.Btn1{
+    border: 2px solid #0a0a0a;
+    border-radius: 5px;
+    background: rgb(200,196,196);
+    background: linear-gradient(0deg, rgba(200,196,196,1) 15%, rgba(249,249,249,1) 53%);
+    width: 75px;
+    height: 40px;
+}
+
+.cardCarrito{
+    display: flex;
+    align-items: center;
+    width: 220px;
+    margin: 15px;
+}
+
+.cardCarrito img{
+    width: 150px;
+    height: 150px;
 }

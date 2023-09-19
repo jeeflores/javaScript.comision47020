@@ -1,5 +1,6 @@
 const contenedorProductos = document.getElementById("contenedorProductos")
-
+const carritoProductos = document.getElementById("mostrarCarrito")
+const imgCarrito = document.getElementById("imgCarrito")
 
 class producto {
     constructor(id, nombre, precio, img){
@@ -34,6 +35,13 @@ calzado9, calzado10, calzado11, calzado12, calzado13, calzado14, calzado15, calz
 
 console.log(productoTienda)
 
+
+
+
+
+
+
+
 //continuar con el mostrar productos
 
 
@@ -46,13 +54,11 @@ function mostrarProductos() {
                             <div>
                                 <h5>${producto.nombre}</h5>
                                 <p> $ ${producto.precio}</p>
-                                <button class="btn colorBoton" id= "boton ${producto.id}"> ** Agregar **</button>
+                                <button class="Btn1" id= "boton ${producto.id}"> Agregar </button>
                             </div>
                         </div>`
                         
             contenedorProductos.appendChild(card);
-            document.body.append(card)
-
 
 
             const botonCompra = document.getElementById(`boton ${producto.id}`);
@@ -68,18 +74,31 @@ function mostrarProductos() {
 
         });
 }
-
-    console.log(mostrarProductos);
+    mostrarProductos()
 
 
     
-    let carrito = [];
+let carrito = [];
 
     const mostrarCarrito = (id) =>{
         const seleccionado = productoTienda.find(producto => producto.id === id)
         carrito.push(seleccionado)
         console.log(carrito);
-    }
-    
+        productoTienda.forEach((producto)=>{
+        const cardCarrito = document.createElement("div");
+        cardCarrito.innerHTML = `<div class = "cardCarrito">
+                        <img src="${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
+                        <div>
+                            <h5>${producto.nombre}</h5>
+                            <p> $ ${producto.precio}</p>
+                            <button class="Btn1" id= "boton ${producto.id}"> Eliminar </button>
+                        </div>
+                    </div>`
+        carritoProductos.appendChild(cardCarrito)
+    })}
+        
+    imgCarrito.addEventListener("click",()=>{mostrarCarrito();})
 
 
+//localStorage.setItem("carritoPrueba",JSON.stringify(productoTienda))		
+//console.log(localStorage.getItem("carritoPrueba"));
